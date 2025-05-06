@@ -15,20 +15,34 @@ function loadLocalThenFetch() {
 }
 
 function fetchLiveData() {
-  return fetch("https://script.google.com/macros/s/AKfycbz0nGijMiBKewKK5sohDxBNb1xgqMEC9--N-bawUgy7LLGRcpejJXxuJbrSREj1FKE-/exec")
+  return fetch("https://script.google.com/macros/s/AKfycbyThAKXxEn1fCcjf6qc5Wd15Vp7JMTu7GiATkTYxZHtUVpOo3_IRuwHxD1qdir7LLsk/exec")
     .then(response => response.json())
     .then(data => displayResults(data))
     .catch(error => console.error('Error loading live data:', error));
 }
 
-function loadPrecinctProgress() {
-  // Test data: 10 reported out of 30
-  const testData = {
-    precincts_reported: 20,
-    total_precincts: 30
-  };
+const precinctProgressURL = "https://script.google.com/macros/s/AKfycbyThAKXxEn1fCcjf6qc5Wd15Vp7JMTu7GiATkTYxZHtUVpOo3_IRuwHxD1qdir7LLsk/exec?type=precincts";
 
-  updatePrecinctProgress(testData);
+function updatePrecinctProgress(reported, total) {
+  const fill = document.getElementById('precinct-fill');
+  const label = document.getElementById('percent');
+
+  const percentage = (reported / total) * 100;
+
+  fill.style.width = `${percentage}%`;
+  label.textContent = `${Math.round(percentage)}%`;
+}
+
+function loadPrecinctProgress() {
+  fetch(precinctProgressURL)
+    .then(res => res.json())
+    .then(data => {
+      console.log("API response:", data);
+      if (data.reported != null && data.total != null) {
+        updatePrecinctProgress(data.reported, data.total);
+      }
+    })
+    .catch(err => console.error("Error fetching progress data:", err));
 }
 
 
@@ -56,7 +70,6 @@ function displayResults(data) {
   document.getElementById('last-updated').textContent = `Partial and unofficial results from poll watchers as of ${formatted}`;
 
 }
-
 
 
 function getPartyColor(party) {
@@ -121,15 +134,4 @@ function displayPosition(listId, candidates) {
 
       list.appendChild(candidateBox);
     });
-}
-
-function updatePrecinctProgress(data) {
-  const fill = document.getElementById('precinct-fill');
-  const label = document.getElementById('percent');
-
-  const { precincts_reported, total_precincts } = data;
-  const percentage = (precincts_reported / total_precincts) * 100;
-
-  fill.style.width = `${percentage}%`;
-  label.textContent = `${Math.round(percentage)}%`;
 }
