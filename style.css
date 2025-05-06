@@ -170,7 +170,7 @@ section h2 {
 .progress-bar {
   flex-grow: 1;
   height: 20px;
-  background-color: #d08787;
+  background-color: #a1a1a1;
   margin: 0.5rem 0;
   overflow: hidden;
   position: relative;
