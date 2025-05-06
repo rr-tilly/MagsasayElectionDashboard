@@ -15,7 +15,7 @@ function loadLocalThenFetch() {
 }
 
 function fetchLiveData() {
-  return fetch("https://script.google.com/macros/s/AKfycby1eF8bOOWeFIMYOwbQfMfwxPMF4ZLt1apejh6ww-CAxyMzXPEUlKyi1C9vnUKZ7uSs/exec")
+  return fetch("https://script.google.com/macros/s/AKfycbz0nGijMiBKewKK5sohDxBNb1xgqMEC9--N-bawUgy7LLGRcpejJXxuJbrSREj1FKE-/exec")
     .then(response => response.json())
     .then(data => displayResults(data))
     .catch(error => console.error('Error loading live data:', error));
