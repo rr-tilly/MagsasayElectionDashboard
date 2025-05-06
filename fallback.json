@@ -1,0 +1,45 @@
+{
+  "congressman": [
+    { "name": "Karen Lagbas", "party": "NUP", "votes": 0 },
+    { "name": "Christian Unabia", "party": "LAKAS", "votes": 0 }
+  ],
+  "councilors": [
+    { "name": "Bimbo Bendijo", "party": "IND", "votes": 0 },
+    { "name": "Edu Betonio", "party": "PDYN", "votes": 0 },
+    { "name": "Alfredo Cultura", "party": "PDPLBN", "votes": 0 },
+    { "name": "Amor Deloso", "party": "LAKAS", "votes": 0 },
+    { "name": "Juanito Duran", "party": "NUP", "votes": 0 },
+    { "name": "Argams Gamil", "party": "LAKAS", "votes": 0 },
+    { "name": "Raymond Gaviola", "party": "NUP", "votes": 0 },
+    { "name": "Django Gerona", "party": "LAKAS", "votes": 0 },
+    { "name": "Bats Gonzales", "party": "LAKAS", "votes": 0 },
+    { "name": "Benhur Lago", "party": "IND", "votes": 0 },
+    { "name": "Lijun Mendoza", "party": "PDYN", "votes": 0 },
+    { "name": "Arnold Palulay", "party": "PDPLBN", "votes": 0 },
+    { "name": "Ricardo Ratilla", "party": "IND", "votes": 0 },
+    { "name": "Jojo Roxas", "party": "LAKAS", "votes": 0 },
+    { "name": "Alma Tabuan", "party": "IND", "votes": 0 },
+    { "name": "Coy-Ubs Uba", "party": "LAKAS", "votes": 0 }
+  ],
+  "governor": [
+    { "name": "Lito Simacon", "party": "IND", "votes": 0 },
+    { "name": "Peter Unabia", "party": "LAKAS", "votes": 0 },
+    { "name": "Juliette Uy", "party": "NUP", "votes": 0 }
+  ],
+  "vice_governor": [
+    { "name": "Rey Tata Cagampang", "party": "IND", "votes": 0 },
+    { "name": "Erik Khu", "party": "NUP", "votes": 0 },
+    { "name": "Jigjag Pelaez", "party": "LAKAS", "votes": 0 }
+  ],
+  "mayor": [
+    { "name": "Grace Abao", "party": "PDPLBN", "votes": 0 },
+    { "name": "Bryan Bacoy", "party": "NUP", "votes": 0 },
+    { "name": "Charlie Buhisan", "party": "LAKAS", "votes": 0 }
+  ],
+  "vice_mayor": [
+    { "name": "Sonia Bacsarsa", "party": "IND", "votes": 0 },
+    { "name": "Bebe Buhisan", "party": "NP", "votes": 0 },
+    { "name": "Gam Gallao", "party": "PDPLBN", "votes": 0 },
+    { "name": "Nuj Nisperos", "party": "NUP", "votes": 0 }
+  ]
+}
