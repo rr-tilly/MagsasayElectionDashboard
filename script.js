@@ -78,7 +78,7 @@ function displayPosition(listId, candidates) {
 
   list.innerHTML = ''; // Clear old data
 
-  const maxVotes = 25000; // Or dynamically calculate based on candidates, if needed
+  const maxVotes = 24662; // Or dynamically calculate based on candidates, if needed
 
   candidates
     .sort((a, b) => b.votes - a.votes)
